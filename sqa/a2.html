@@ -5,30 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
-    <link rel="stylesheet" href="/practice/main.css">
+    <link rel="stylesheet" href="a2.css">
     
 </head>
 <body>
     <div class="btn">
     <h1>THIS IS A TRIANGLE TYPE FINDER APP</h1>
-    <label for="">side 1
-        <input type="text"><button type="submit">enter</button>
-    </label>
-    <label for="">side 2
-        <input type="text"><button type="submit">enter</button>
-    </label>
-    <label for="">side 3
-        <input type="text"><button type="submit">enter</button>
-    </label>
-    <br>
-    </div>
-    <h1>Result:</h1>
+    <form id="triangle-form">
+        <label for="side-a">Enter the length of side a:</label>
+        <input type="number" id="side-a" name="side-a"><br><br>
+    
+        <label for="side-b">Enter the length of side b:</label>
+        <input type="number" id="side-b" name="side-b"><br><br>
+    
+        <label for="side-c">Enter the length of side c:</label>
+        <input type="number" id="side-c" name="side-c"><br><br>
+    
+        <input id="submit-btn"   type="button" value="Submit" onclick="checkTriangleType()">
+    </form>
+    
+    <div id="result"></div>
+    
+   
     
 
     
 
     
 
-    <script src="script.js"></script>
+    <script src="scriptA2.js"></script>
 </body>
 </html>
