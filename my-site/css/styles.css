@@ -1,6 +1,44 @@
 body{
     margin: 0;
+    text-align: center;
+    
+    font-family: sans-serif;
+    
 }
-div{
-    background-color: #E3FDFD;
+h1{
+    margin: 0;
+}
+
+.top-container{
+background-color: #E3FDFD;
+height: 100vh;
+margin-bottom: 1rem;
+
+
+}
+
+.top{
+    position: relative;
+    top: 1rem;
+    left: 10rem;
+    margin-bottom: 0px;
+    
+    
+    
+}
+.content{
+    
+    margin-top: 0px;
+    position: relative;
+    top: 2rem;
+    font-size: 90px;
+}
+
+.cloud{
+    position: absolute;
+    
+}
+
+.mountain{
+   
 }
