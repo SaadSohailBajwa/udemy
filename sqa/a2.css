@@ -1,0 +1,25 @@
+body {
+    background-color: blanchedalmond;
+    font: 1em sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 1rem;
+    color: rgb(139, 78, 196);
+}
+
+h2 {
+    text-align: center;
+}
+
+.btn {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
