@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    height: 20rem;
+    width: 10rem;
+    background-color: white;
+}
