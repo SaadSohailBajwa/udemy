@@ -74,7 +74,6 @@ function compare(){
 
 function main(){
     
-
     document.getElementById("player1").firstElementChild.firstElementChild.nextElementSibling.classList.remove("invisible")
     document.getElementById("player2").firstElementChild.firstElementChild.nextElementSibling.classList.remove("invisible")
     randomGen()
