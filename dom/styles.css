@@ -1,0 +1,68 @@
+body{
+    background-color: teal;
+}
+
+h2{
+    
+    text-align: center;
+}
+.header{
+    text-align: center;
+    margin: 5rem;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.dot{
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border-radius: 50%;
+}
+#player1{
+
+    background-color: red;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 15%;
+    margin: 5rem;
+    padding: 1rem;
+    
+}
+
+#player2{
+    margin: 5rem;
+    background-color: red;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 15%;
+    padding: 1rem;
+}
+
+.line-1,.line-2,.line-3{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    }
+
+.invisible{
+    visibility: hidden;
+} 
+
+.btn{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+button{
+    height: 3rem;
+    width: 6rem;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 5rem;
+}
