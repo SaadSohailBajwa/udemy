@@ -1,45 +1,65 @@
 for(var i=0; i<document.querySelectorAll("button").length; i++){
     document.querySelectorAll("button")[i].addEventListener("click", function(){
         
-        switch (this.innerHTML) {
-            case "A":
+        playSound(this.innerHTML);
+    })
+    document.addEventListener("keydown",function(event){
+    playSound(event.key);
+})
+
+}
+
+
+
+
+function playSound(key){
+    switch (key) {
+            case "a":
                 let key01 = new Audio("audio/key01.mp3");
+                key01.volume = 0.1;
                 key01.play();
                 break;
-            case "S":
+            case "s":
                 let key03 = new Audio("audio/key03.mp3");
+                key03.volume = 0.1;
                 key03.play();
                 break;
-            case "D":
+            case "d":
                 let key05 = new Audio("audio/key05.mp3");
+                key01.volume = 0.1;
                 key05.play();
                 break;
-            case "F":
+            case "f":
                 let key07 = new Audio("audio/key07.mp3");
+                key07.volume = 0.1;
                 key07.play();
                 break;
-            case "G":
+            case "g":
                 let key09 = new Audio("audio/key09.mp3");
+                key09.volume = 0.1;
                 key09.play();
                 break;
-            case "H":
+            case "h":
                 let key11 = new Audio("audio/key11.mp3");
+                key11.volume = 0.1;
                 key11.play();
                 break;
-            case "J":
+            case "j":
                 let key13 = new Audio("audio/key13.mp3");
+                key13.volume = 0.1;
                 key13.play();
                 break;
-            case "K":
+            case "k":
                 let key15 = new Audio("audio/key15.mp3");
+                key15.volume = 0.1;
                 key15.play();
                 break;
-            case "L":
+            case "l":
                 let key17 = new Audio("audio/key17.mp3");
+                key17.volume = 0.1;
                 key17.play();
                 break;                            
             default:
                 break;
         }
-    })
 }
