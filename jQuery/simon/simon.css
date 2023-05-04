@@ -20,21 +20,29 @@ h1,h2{
     border-radius: 10%;
 }
 
-.border{
+.border-click{
+    
+    box-sizing: border-box;
     border: solid black 10px;
 }
 
-.yellow{
+.border-next{
+
+    box-sizing: border-box;
+    border: solid white 10px;
+}
+
+.b-1{
     background-color: yellow;
 }
-.blue{
+.b-2{
     background-color: blue;
 }
 
-.green{
+.b-3{
     background-color: green;
 }
 
-.red{
+.b-4{
     background-color: red;
 }
