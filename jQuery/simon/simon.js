@@ -10,24 +10,32 @@ console.log(document.querySelector(".b-1").classList)
 
 
 function assignEventListener(x){
+    
     $(".b-"+x).on("click",function(){
     
-    $(".b-"+x).addClass("border-click");
-    setTimeout(function(){
-        $(".b-"+x).removeClass("border-click")
-    },200);
+        $(".b-"+x).addClass("border-click");
+    
+        setTimeout(function(){
+            $(".b-"+x).removeClass("border-click")
+            },200);
 
     
 
-
-    playerLevel.push(x)
-    if(playerLogic() == true){
-        levels.push(randomGen());
-        $("h1").text("you win");
-    }else{
-        $("h1").text("you lose");
-    }
+        console.log(x+" got clicked")    
+        playerLevel.push(x)
+        if(playerLogic()){
+            
+            nextLevelHint();
+            $("h1").text("you win");
+        }else{
+            $("h1").text("you lose");
+        }
+    
+    console.log("player levels are: ")    
     console.log(playerLevel);
+    console.log("levels are:")
+    console.log(levels)
+
 });
 }
 
@@ -48,7 +56,9 @@ function randomGen(){
 
 function playerLogic(){
 
-    if(playerLevel[playerLevel.length-1] == levels[playerLevel.length-1]){
+    if(playerLevel[playerLevel.length-1] == levels[levels.length-1]){
+        console.log(playerLevel[playerLevel.length-1])
+        console.log(levels[levels.length-1])
         return true;
     }else{
         return false;
