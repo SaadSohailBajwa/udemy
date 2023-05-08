@@ -1,6 +1,10 @@
+
+
 let levels = []
 let playerLevel = []
 let globalCounter = 0
+let pointer = 0
+let currentLevel = 1
 
 
 console.log(levels)
@@ -23,11 +27,12 @@ function assignEventListener(x){
 
         console.log(x+" got clicked")    
         playerLevel.push(x)
-        if(playerLogic()){
+        if(gameLogic(x) === 1){
             
             nextLevelHint();
-            $("h1").text("you win");
-        }else{
+            currentLevel++
+            $("h1").text("round "+currentLevel);
+        }else if(gameLogic(x) === 2){
             $("h1").text("you lose");
         }
     
@@ -55,7 +60,8 @@ function randomGen(){
 
 
 function playerLogic(){
-
+    // returns TRUE if last element of both arrays are same 
+    // else returns FALSE 
     if(playerLevel[playerLevel.length-1] == levels[levels.length-1]){
         console.log(playerLevel[playerLevel.length-1])
         console.log(levels[levels.length-1])
@@ -65,8 +71,34 @@ function playerLogic(){
     }
 }
 
+function gameLogic(box){
+
+    // this function is not behaving properly, has something to do with return problem 
+
+    console.log("box is "+box)
+    console.log(levels[pointer])
+    console.log("pointer is "+ pointer)
+    
+
+    if(box == levels[pointer]){
+        if(pointer < (levels.length-1)){
+            pointer++;
+            return 0
+        }else if(pointer == (levels.length-1)){
+            pointer = 0;
+            return 1
+        }
+        
+    }else if(box != levels[pointer]){
+        pointer = 0;
+        return 2
+    }
+
+}
+
 function nextLevelHint(){
 
+    // gives hint of next by adding class to the equalent last index of array
     levels.push(randomGen())
     setTimeout(function(){
         $(".b-"+levels[levels.length-1]).addClass("border-next")
