@@ -27,13 +27,16 @@ function assignEventListener(x){
 
         console.log(x+" got clicked")    
         playerLevel.push(x)
-        if(gameLogic(x) === 1){
+        
+        let gameLogicVal = gameLogic(x)
+        if(gameLogicVal === 1){
             
             nextLevelHint();
             currentLevel++
             $("h1").text("round "+currentLevel);
-        }else if(gameLogic(x) === 2){
+        }else if(gameLogicVal === 2){
             $("h1").text("you lose");
+            document.querySelector("h2").innerText = "Game over"
         }
     
     console.log("player levels are: ")    
@@ -82,7 +85,7 @@ function gameLogic(box){
     
 
     if(box == levels[pointer]){
-        if(pointer < (levels.length-1)){
+        if(pointer != (levels.length-1)){
             console.log("pointer less than level len")
             pointer++;
             return 3
@@ -102,6 +105,7 @@ function gameLogic(box){
 function nextLevelHint(){
 
     // gives hint of next by adding class to the equalent last index of array
+    document.querySelector("h2").textContent = "Game in progress"
     levels.push(randomGen())
     setTimeout(function(){
         $(".b-"+levels[levels.length-1]).addClass("border-next")
@@ -112,7 +116,9 @@ function nextLevelHint(){
 
 }
 
-nextLevelHint()
+
+
+
 
 
 
