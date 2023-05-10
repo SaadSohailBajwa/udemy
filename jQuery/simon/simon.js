@@ -7,10 +7,10 @@ let pointer = 0
 let currentLevel = 1
 
 
-console.log(levels)
+
 
     
-console.log(document.querySelector(".b-1").classList)    
+   
 
 
 function assignEventListener(x){
@@ -40,6 +40,7 @@ function assignEventListener(x){
     console.log(playerLevel);
     console.log("levels are:")
     console.log(levels)
+    console.log("1 click ended ---------------------")
 
 });
 }
@@ -76,15 +77,17 @@ function gameLogic(box){
     // this function is not behaving properly, has something to do with return problem 
 
     console.log("box is "+box)
-    console.log(levels[pointer])
+    console.log("box should be = to " + levels[pointer])
     console.log("pointer is "+ pointer)
     
 
     if(box == levels[pointer]){
         if(pointer < (levels.length-1)){
+            console.log("pointer less than level len")
             pointer++;
-            return 0
+            return 3
         }else if(pointer == (levels.length-1)){
+            console.log("pointer = to levels len")
             pointer = 0;
             return 1
         }
