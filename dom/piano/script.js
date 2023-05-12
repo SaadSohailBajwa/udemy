@@ -2,13 +2,23 @@ for(var i=0; i<document.querySelectorAll("button").length; i++){
     document.querySelectorAll("button")[i].addEventListener("click", function(){
         
         playSound(this.innerHTML);
+        animation(this.innerHTML);
     })
     document.addEventListener("keydown",function(event){
     playSound(event.key);
+    animation(event.key);
 })
 
 }
 
+function animation(currEvent){
+    let eventVar = document.querySelector("."+currEvent);
+    eventVar.classList.add("animate");
+    
+    setTimeout(function(){
+    eventVar.classList.remove("animate")
+},100);
+}
 
 
 
@@ -26,7 +36,7 @@ function playSound(key){
                 break;
             case "d":
                 let key05 = new Audio("audio/key05.mp3");
-                key01.volume = 0.1;
+                key05.volume = 0.1;
                 key05.play();
                 break;
             case "f":
