@@ -9,7 +9,7 @@ app.get("/",function(request,response){
 })
 
 app.get("/about" , (req,res)=>{
-    res.send("The owner of this page is Saad")
+    res.send("The owner of this page is Saad who is learning how to code")
 })
 
 app.listen(3000, ()=>{
