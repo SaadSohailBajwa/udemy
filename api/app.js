@@ -26,7 +26,7 @@ app.get("/london",function(req,res){
         respone.on("data",function(data){
             const London = JSON.parse(data);
             console.log(London.name,London.timezone)
-            res.send("The timezone of london is: "+London.main.temp)
+            res.send("The temperature of london right now is: "+London.main.temp)
         })
     });
 
